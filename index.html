@@ -14,6 +14,34 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <!-- Javascript -->
+
+        <script> <!--
+            function showIntroduction() {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("presentation_content").innerHTML = xmlhttp.responseText;
+                    }
+                    else{
+                        document.getElementById("presentation_content").innerHTML = "<p>There was an error loading the introduction</p>"
+                    }
+                }   
+                xmlhttp.open("GET", "./presentation/introduction.html", true);
+                xmlhttp.send();
+            }
+       
+        
+        $( document ).ready(function() {
+            showIntroduction();
+            return false;
+        });
+        
+        -->
+        </script>
+
+
 </head>
 
 <body>
@@ -35,24 +63,18 @@
          <!-- Collect the nav links, forms, and other content for toggling -->
          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
            <ul class="nav navbar-nav navbar-right">
-             <li id="navbar-Introduction"><a href="#Introduction">Introduction</a></li>
-             <li id="navbar-Basics"><a href="#Basics">Basics</a></li>
-             <li id="navbar-Portfolio"><a href="#Intermidiate">Intermidiate</a></li>
-             <li id="navbar-Advanced"><a href="#Advanced">Advanced</a></li>
+             <li id="navbar-Introduction"><a id="intro-button" href='showIntroduction()' onclick="showIntroduction();return false;" >Introduction</a></li>
+             <li id="navbar-Basics"><a href="#">Basics</a></li>
+             <li id="navbar-Portfolio"><a href="#">Intermidiate</a></li>
+             <li id="navbar-Advanced"><a href="#">Advanced</a></li>
            </ul>
          </div><!-- /.navbar-collapse -->
        </div><!-- /.container-fluid -->
      </nav>
       <div class="container">
-        <div class="jumbotron" id="content">
-          <h1>Introduction</h1>
-          <p>Bootstrap is a powerful front end web development tool that allows for quick development as well as clean
-                and professional looking web pages. Boot strap was developed by Mark Otto and Jacob Thornton at Twitter.
-                and became an open source project on Github in August 2014.</p>
-          <br>
-          <br>
-          <p>We are going to try and walk you through an introduction to bootstrap using a bootstrap website!!! You can use the navigation bar
-                at the top of the page to cycle through each chapter.
+        <div class="jumbotron" id="presentation_content">
+            <p>"Hello"</p>
+            
         </div>
       </div>
 
