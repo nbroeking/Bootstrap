@@ -18,7 +18,7 @@
         <!-- Javascript -->
 
         <script> <!--
-            function showIntroduction() {
+            function showPage(file) {
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.onreadystatechange = function() {
                     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -28,13 +28,13 @@
                         document.getElementById("presentation_content").innerHTML = "<p>There was an error loading the introduction</p>"
                     }
                 }   
-                xmlhttp.open("GET", "./presentation/introduction.html", true);
+                xmlhttp.open("GET", "./presentation/"+file+".html", true);
                 xmlhttp.send();
             }
        
         
         $( document ).ready(function() {
-            showIntroduction();
+            showPage("introduction");
             return false;
         });
         
@@ -63,7 +63,8 @@
          <!-- Collect the nav links, forms, and other content for toggling -->
          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
            <ul class="nav navbar-nav navbar-right">
-             <li id="navbar-Introduction"><a id="intro-button" href='showIntroduction()' onclick="showIntroduction();return false;" >Introduction</a></li>
+             <li id="navbar-Introduction"><a id="intro-button" href="#" onclick="showPage('introduction');return false;" >Introduction</a></li>
+             <li id="navbar-GettingStarted"><a href="#" onclick="showPage('gettingstarted');return false;">Getting Started</a></li>
              <li id="navbar-Basics"><a href="#">Basics</a></li>
              <li id="navbar-Portfolio"><a href="#">Intermidiate</a></li>
              <li id="navbar-Advanced"><a href="#">Advanced</a></li>
@@ -73,7 +74,7 @@
      </nav>
       <div class="container">
         <div class="jumbotron" id="presentation_content">
-            <p>"Hello"</p>
+            <p>"Loading Page..."</p>
             
         </div>
       </div>
