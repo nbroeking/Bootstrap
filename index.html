@@ -16,32 +16,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
         <!-- Javascript -->
-
-        <script> <!--
-            function showPage(file) {
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange = function() {
-                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                        document.getElementById("presentation_content").innerHTML = xmlhttp.responseText;
-                    }
-                    else{
-                        document.getElementById("presentation_content").innerHTML = "<p>There was an error loading the introduction</p>"
-                    }
-                }   
-                xmlhttp.open("GET", "./presentation/"+file+".html", true);
-                xmlhttp.send();
-            }
-       
-        
-        $( document ).ready(function() {
-            showPage("introduction");
-            return false;
-        });
-        
-        -->
-        </script>
-
-
+        <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -67,7 +42,7 @@
              <li id="navbar-GettingStarted"><a href="#" onclick="showPage('gettingstarted');return false;">Getting Started</a></li>
              <li id="navbar-Basics"><a href="#" onclick="showPage('basics');return false;">Basics</a></li>
              <li id="navbar-Portfolio"><a href="#">Intermidiate</a></li>
-             <li id="navbar-Advanced"><a href="#">Advanced</a></li>
+             <li id="navbar-Advanced"><a href="#" onclick="showPage('advanced');return false;">Advanced</a></li>
            </ul>
          </div><!-- /.navbar-collapse -->
        </div><!-- /.container-fluid -->
