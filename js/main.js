@@ -1,4 +1,3 @@
-
 function showPage(file) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
