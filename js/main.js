@@ -1,9 +1,4 @@
 function showPage(file) {
-<<<<<<< HEAD
-    $.get("./pages/" + file + ".html", function(data) {
-        $("#presentation_content").html(data)
-    });
-=======
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -24,7 +19,6 @@ function showPage(file) {
     }   
     xmlhttp.open("GET", "./pages/"+file+".html", true);
     xmlhttp.send();
->>>>>>> 69b94ac91e6f01b5e28695c3d7deb7aa4eb88e36
 }
 
 
@@ -33,8 +27,6 @@ $( document ).ready(function() {
     return false;
 });
 
-<<<<<<< HEAD
-=======
 function showSuccess() {
    $('#successAlert').show();
    $('#warningAlert').hide();
@@ -50,8 +42,3 @@ function showError() {
    $('#successAlert').hide();
    $('#warningAlert').hide();
 }
-
-
-
-
->>>>>>> 69b94ac91e6f01b5e28695c3d7deb7aa4eb88e36
