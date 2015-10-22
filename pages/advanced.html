@@ -150,11 +150,57 @@
         <div class="line-separator"></div>
 
         <!-- Tooltip -->
-        <h3 class = "page-section">Accordian</h3>
+        <h3 class = "page-section">Collapse</h3>
         <div class="line-separator"></div>
-          <h4 class ="page-section-sub">Description</h4>
-          <h4 class ="page-section-sub">Example</h4>
-          <h4 class ="page-section-sub">Code</h4>
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Description
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                  Collapse allows us to easily toggle segments of content. An example of a bootstrap supported collapse implementation is the accordian. The content you are currently viewing is being displayed within an accordian. 
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Example
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                  This structure is the example!
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Code
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                  Code Code Code 
+                  Code Code Code 
+                  Code Code Code 
+                  Code Code Code 
+                  Code Code Code 
+                  Code Code Code 
+                </div>
+              </div>
+            </div>
+          </div>
 
 
 </body>
