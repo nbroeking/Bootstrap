@@ -17,4 +17,26 @@ $( document ).ready(function() {
     showPage("introduction");
     return false;
 });
-        
+
+$('#successAlert').hide();
+$('#warningAlert').hide();
+$('#failureAlert').hide();
+
+function showSuccess() {
+   $('#successAlert').show();
+   $('#warningAlert').hide();
+   $('#failureAlert').hide();
+}
+function showWarning() {
+   $('#warningAlert').show();
+   $('#successAlert').hide();
+   $('#failureAlert').hide();
+}
+function showError() {
+   $('#failureAlert').show();
+   $('#successAlert').hide();
+   $('#warningAlert').hide();
+}
+
+
+
