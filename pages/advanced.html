@@ -110,36 +110,52 @@
           <h4 class ="page-section-sub">Description</h4>
             <p>Alerts are very handy for making websites interactive for the user. They can be used to indicate the status of various components of the website, and most commonly, be used in conjunction with forms. Below we have a series of buttons that spawn different alerts.
           <h4 class ="page-section-sub">Example</h4>
-            <div class="btn-group" role="group" aria-label="...">
-                <button type="button" class="btn btn-primary" id="successButton" onclick="showSuccess();">Click for Success</button>
-                <button type="button" class="btn btn-warning" id="warningButton" onclick="showWarning();">Click for Warning</button>
-                <button type="button" class="btn btn-danger"  id="failureButton" onclick="showError();">Click for Failure</button>
-            </div>
-            <div class="alert alert-success" role="alert" id="successAlert" style="display:none;">Success! You clicked the success button.
-              <button type="button" class="close" data-dismiss="alert">
-                X
-              </button>
-            </div>
-            <div class="alert alert-warning" role="alert" id="warningAlert" style="display:none;">Warning... not a good button to press.
-              <button type="button" class="close" data-dismiss="alert">
-                X
-              </button>
-            </div>
-            <div class="alert alert-danger" role="alert" id="failureAlert" style="display:none;">
-              Failure! Why did you click this??
-              <button type="button" class="close" data-dismiss="alert">
-                X
-              </button>
-            </div>
+            <div class ="span6" style="text-align:center">
+              <div class="btn-group" role="group" aria-label="...">
+                  <button type="button" class="btn btn-primary" id="successButton" onclick="showSuccess();">Click for Success</button>
+                  <button type="button" class="btn btn-warning" id="warningButton" onclick="showWarning();">Click for Warning</button>
+                  <button type="button" class="btn btn-danger"  id="failureButton" onclick="showError();">Click for Failure</button>
+              </div>
+              <div class="alert alert-success" role="alert" id="successAlert" style="display:none;">Success! You clicked the success button.
+                <button type="button" class="close" data-dismiss="alert">
+                  X
+                </button>
+              </div>
+              <div class="alert alert-warning" role="alert" id="warningAlert" style="display:none;">Warning... not a good button to press.
+                <button type="button" class="close" data-dismiss="alert">
+                  X
+                </button>
+              </div>
+              <div class="alert alert-danger" role="alert" id="failureAlert" style="display:none;">
+                Failure! Why did you click this??
+                <button type="button" class="close" data-dismiss="alert">
+                  X
+                </button>
+              </div>
+          </div>
+
           <h4 class ="page-section-sub">Code</h4>
 
         <!-- Popover -->
         <h3 class = "page-section">Popover</h3>
         <div class="line-separator"></div>
+          <h4 class ="page-section-sub">Description</h4>
+            </p>Popovers are an easy way to quickly display small bits of text, but in a much more light-weight manner than with modals. They can have various triggers(hover,click,etc), and are useful for simple tooltips. 
+          <h4 class ="page-section-sub">Example</h4>
+          <div class ="span6" style="text-align:center">
+            <a tabindex="0" class="btn btn-lg btn-primary" role="button" data-toggle="popover" data-trigger="focus" title="Click for a tooltip." data-content="This is a small message associated with the button." >Click for a popover msg.</a>
+            <a tabindex="0" class="btn btn-lg btn-primary" role="button" data-toggle="popover" data-trigger="hover" title="Click for a tooltip." data-content="This is a small message associated with the button." >Hover for a popover msg.</a>
+          </div>
+          <h4 class ="page-section-sub">Code</h4>
+        <div class="line-separator"></div>
 
         <!-- Tooltip -->
-        <h3 class = "page-section">Tooltip</h3>
+        <h3 class = "page-section">Accordian</h3>
         <div class="line-separator"></div>
+          <h4 class ="page-section-sub">Description</h4>
+          <h4 class ="page-section-sub">Example</h4>
+          <h4 class ="page-section-sub">Code</h4>
+
 
 </body>
 </html>

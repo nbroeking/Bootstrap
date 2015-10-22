@@ -3,6 +3,15 @@ function showPage(file) {
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             document.getElementById("presentation_content").innerHTML = xmlhttp.responseText;
+            
+            if (file == "advanced")
+            {
+                $('#successAlert').hide();
+                $('#warningAlert').hide();
+                $('#failureAlert').hide();
+                $('[data-toggle="popover"]').popover();
+            }
+        
         }
         else{
             document.getElementById("presentation_content").innerHTML = "<p>There was an error loading the introduction</p>"
@@ -17,10 +26,6 @@ $( document ).ready(function() {
     showPage("introduction");
     return false;
 });
-
-$('#successAlert').hide();
-$('#warningAlert').hide();
-$('#failureAlert').hide();
 
 function showSuccess() {
    $('#successAlert').show();
@@ -37,6 +42,7 @@ function showError() {
    $('#successAlert').hide();
    $('#warningAlert').hide();
 }
+
 
 
 
