@@ -71,8 +71,65 @@
             <button type="button" class="btn btn-primary">Maybe</button>
             <button type="button" class="btn btn-primary">No</button>
         </div>
+    
+        <h3>Forms</h3>
+        <p>Buttons are nice and can provide a great user expierence but you can't do anything really useful unless you have user input. User input allows users to log in, proivide information, and interact with the system in a way that you just can't do with anything else. Thy way html does this is with the use of forms. Luckly, for us bootsrap has a way to make forms look nice and professional.</p>
+        <br>
+        <p>Below is an example of a very standard login form.</p>
+        <br>
+        <form role="form">
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+            <br>
+        
+        <pre>
+            <code>
+&ltform role="form"&gt
+  &ltdiv class="form-group"&gt
+    &ltlabel for="email"&gtEmail address:&lt/label&gt
+    &ltinput type="email" class="form-control" id="email"&gt
+  &lt/div&gt
+  &ltdiv class="form-group"&gt
+    &ltlabel for="pwd"&gtPassword:</label>
+    &ltinput type="password" class="form-control" id="pwd"&gt
+  &lt/div&gt
+  &ltdiv class="checkbox"&gt
+    &ltlabel&gt&ltinput type="checkbox"&gt Remember me&lt/label&gt
+  &lt/div&gt
+  &ltbutton type="submit" class="btn btn-default"&gtSubmit&lt/button&gt
+&lt/form&gt
+            </code>
+        </pre>
+    
+        <h3>Inputs</h3>
+        <p>As you can see from above bootstrap provides several types of inputs we showed you a basic text field above using the form-control class. Following the theme of the rest of the tutorial, bootstrap provides more.</p>
+    
+        <h4>Textareas</h4>
+        <div class="form-group">
+            <label for="comment">Bootstrap also provides text areas.</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <br>
+        <p>The code for this looks like:</p>
+        <pre><code>
+&ltdiv class="form-group"&gt
+    &ltlabel for="comment"&gtBootstrap also provides text areas.&lt/label&gt
+    &lttextarea class="form-control" rows="5" id="comment"&gt&lt/textarea&gt
+&lt/div&gt        
+        </code></pre>
+    
+    
     </div>
-    
-    
 </body>
 </html>
