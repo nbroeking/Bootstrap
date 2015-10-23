@@ -20,16 +20,16 @@
 <body>
     <div class="container">
         <h1>Basics</h1>
-        <p>Now that we have all the prerequistes done for bootstrap we can start developing friendly and responsive web pages. </p>
+        <p>Now that we have talked about all the prerequisites for bootstrap we can start developing friendly and responsive web pages. Bootstrap provides many different css classes for styling pages but overall it boils down to putting normal html inside of a container. So first we are going to talk about containers. </p>
         <h3>Containers</h3>
-        <p>The first important thing to know is that bootstrap requires a container for everything. If you dont have everything inside a container then it wont get the correct styling. With containers bootstrap gives two options.</p>
-        <h4>.container class</h4>
+        <p>The first important thing to know is that bootstrap requires a container for everything. If you don't have everything inside a container then it wont get the correct styling and wont look the way that you intended. With containers bootstrap gives two options.</p>
+        <h4>1.) .container class</h4>
         <p>The .container class provides a responsive fixed width container</p>
-        <h4>.container-fluid</h4>
-        <p>The .container-fluid class provides a contaner that spans the full width of the view.</p>
+        <h4>2.) .container-fluid</h4>
+        <p>The .container-fluid class provides a container that spans the full width of the view.</p>
         
         <h4>Example</h4>
-        <p>The following example shows the code and the result for a basic webpage using boostrap containers.</p>
+        <p>The following example shows the code and the result for a basic webpage using Boostrap containers.</p>
         
         <h5>Code</h5>
         <pre><code>
@@ -59,7 +59,8 @@
 &lt/html&gt
         </code></pre>
 
-        <h5>Result</h5>
+        <br>
+        <p>This code provides the following result.</p>
         
         <div class="container-fluid">
             <h2>Hello World</h2>
@@ -67,25 +68,25 @@
         </div>
        
         <br>
-        <p>Containers are very important wth bootstrap because at its essence html is designed to display information. The easest way to do this is to put the content into different types of containers. Bootstrap has plenty of different options and the rest of this section is going to focus on the different ways to group data and display it.</p>
+        <p>Containers are very important with bootstrap because that is the only really way to style groups of tags together. At its essence, html is designed to display information. Bootstrap takes this information groups it together and styles it in a way that makes sense to the users. Bootstrap has plenty of different options for containers and the rest of this section is going to focus on the different ways to group data and display it.</p>
         
         <br>
         <h3>JumboTron</h3>
-        <p>A Jumbotron is another type of container that is used to bring extra attention to some content. They are an easy way to draw attention to part of the page while keeping everything consice. In order to use them you must use the .jumbotron class, like we do below.</p>
+        <p>A Jumbotron is another type of container that is used to bring extra attention to some content. They are an easy way to draw attention to part of the page while keeping everything concise. In order to use them you must use the .jumbotron class, like we do below.</p>
         <pre><code>
 &ltdiv class="jumbotron"&gt
     &ltp&gtThis is some attention grabbing text.&lt/p&gt
 &lt/div&gt
         </code></pre>
         <br>
-        <p>This produces produces the following effect.</p>
+        <p>This produces the following effect.</p>
         <div class="jumbotron">
             <h2>Attention!!!!</h2>
             <p>This is some attention grabbing text.</p>
         </div>
         <br>
         <h3>Tables</h3>
-        <p>The next type of container to use is a table. Tables are not unique to bootstrap, they are used in html all the time. Bootstrap adds several css classes though that makes bootstrap tables look way better than the html counterpart. To create a basic table in boostrap you use the &lttable&gt tag with the class .table. For example:</p>
+        <p>The next type of container to use is a table. Tables are not unique to bootstrap, they are used in html all the time. Bootstrap adds several css classes though that makes bootstrap tables look way better than the html counterpart. To create a basic table in Boostrap you use the &lttable&gt tag with the class .table. For example:</p>
         <div class="container">
             <h2>Normal Table</h2>         
             <table class="table">
@@ -155,7 +156,7 @@
         <div class="container">
             <h2>Striped Table</h2>         
             <table class="table-striped">
-                <p>table-stripped alternates every row with diferent colors</p>
+                <p>table-stripped alternates every row with different colors</p>
                 <thead>
                     <tr>
                         <th>Firstname</th>
@@ -285,7 +286,7 @@
         <br>
     
         <h3>Wells</h3>
-        <p>The last container that we are going to show you are wells. Wells are simmilar to a jumbotron except that they arn't as exagerated. They are a nice way to group text together into a text box or similer type of container. To create a well all you need is a container that uses the class .well For example</p>
+        <p>The last container that we are going to show you are wells. Wells are similar to a jumbotron except that they arn't as exaggerated. They are a nice way to group text together into a text box or similar type of container. To create a well all you need is a container that uses the class .well For example</p>
         <br>
         <pre>
             <code>
