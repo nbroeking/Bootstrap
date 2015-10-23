@@ -42,7 +42,3 @@ function showError() {
    $('#successAlert').hide();
    $('#warningAlert').hide();
 }
-
-
-
-

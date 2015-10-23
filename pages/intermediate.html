@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+		<title>Bootstrap Tutorial</title>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></link>
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"></link>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+
+<body> 
+    <div class="container"> 
+        <h1>Intermediate</h1> 
+        <p>Now that we have shown you how to show basic content using bootstrap we are going to add some extra functionality using bootstrap. The next thing that most developers would need to know is how to make content dynmaic. In most apps the way to do this is with user interaction. This page is going to dive into different GUI features that allow users to interact with your web page.</p>
+        
+        <br>
+        <h3>Buttons</h3>
+        <p>The first important way to interact with a gui is through the use of buttons. Bootstrap provides several different button options for us allowing developers to specify the exzact look and feal. Hear are their options: </p>
+        
+        <br>
+        <button type="button" class="btn btn-default">Default</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-link">Link</button>
+        <button type="button" class="btn btn-primary">Primary</button>     
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+    
+        <br>
+        <p>Each one of these buttons can be used in a different situation providing their desired effect. In order to create these buttons you do the following:</p>
+        <br>
+        <pre>
+            <code>
+&ltbutton type="button" class="btn btn-default"&gtDefault&lt/button&gt
+&ltbutton type="button" class="btn btn-success"&gtSuccess&lt/button&gt
+&ltbutton type="button" class="btn btn-link"&gtLink&lt/button&gt
+&ltbutton type="button" class="btn btn-primary"&gtPrimary&lt/button&gt     
+&ltbutton type="button" class="btn btn-info"&gtInfo&lt/button&gt
+&ltbutton type="button" class="btn btn-warning"&gtWarning&lt/button&gt
+&ltbutton type="button" class="btn btn-danger"&gtDanger&lt/button&gt
+            </code>
+        </pre>
+        
+        <br> 
+        
+        <h3>Button Groups</h3>
+        <p>Bootstrap also provides a way to group buttons together. This can be a line of buttons or a group of buttons. Just like many other aspects of bootstrap, the way to do this is to put the buttons inside of a special container. </p>
+        <pre>
+            <code>
+&ltdiv class="btn-group"&gt
+    &ltbutton type="button" class="btn btn-primary"&gtYes&lt/button&gt
+    &ltbutton type="button" class="btn btn-primary"&gtMaybe&lt/button&gt
+    &ltbutton type="button" class="btn btn-primary"&gtNo&lt/button&gt
+&lt/div&gt
+            </code>
+        </pre>
+        
+        <p>This has the effect of:</p>
+        <br>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Yes</button>
+            <button type="button" class="btn btn-primary">Maybe</button>
+            <button type="button" class="btn btn-primary">No</button>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
