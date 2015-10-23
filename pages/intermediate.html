@@ -20,11 +20,11 @@
 <body> 
     <div class="container"> 
         <h1>Intermediate</h1> 
-        <p>Now that we have shown you how to show basic content using bootstrap we are going to add some extra functionality using bootstrap. The next thing that most developers would need to know is how to make content dynmaic. In most apps the way to do this is with user interaction. This page is going to dive into different GUI features that allow users to interact with your web page.</p>
+        <p>Now that we have shown you how to show basic content using bootstrap we are going to add some extra functionality using bootstrap. The next thing that most developers would need to know is how to make content dynamic. In most apps the way to do this is with user interaction. This page is going to dive into different GUI features that allow users to interact with your web page.</p>
         
         <br>
         <h3>Buttons</h3>
-        <p>The first important way to interact with a gui is through the use of buttons. Bootstrap provides several different button options for us allowing developers to specify the exzact look and feal. Hear are their options: </p>
+        <p>The first important way to interact with a gui is through the use of buttons. Bootstrap provides several different button options for us allowing developers to specify the exact look and feel. Hear are their options: </p>
         
         <br>
         <button type="button" class="btn btn-default">Default</button>
@@ -53,7 +53,7 @@
         <br> 
         
         <h3>Button Groups</h3>
-        <p>Bootstrap also provides a way to group buttons together. This can be a line of buttons or a group of buttons. Just like many other aspects of bootstrap, the way to do this is to put the buttons inside of a special container. </p>
+        <p>Bootstrap also provides a way to group buttons together. This can be a line of buttons or a group of buttons. Just like many other aspects of bootstrap, the way to do this is to put the buttons inside of a special container called a btn-group. </p>
         <pre>
             <code>
 &ltdiv class="btn-group"&gt
@@ -63,7 +63,7 @@
 &lt/div&gt
             </code>
         </pre>
-        
+        <br>
         <p>This has the effect of:</p>
         <br>
         <div class="btn-group">
@@ -73,7 +73,7 @@
         </div>
     
         <h3>Forms</h3>
-        <p>Buttons are nice and can provide a great user expierence but you can't do anything really useful unless you have user input. User input allows users to log in, proivide information, and interact with the system in a way that you just can't do with anything else. Thy way html does this is with the use of forms. Luckly, for us bootsrap has a way to make forms look nice and professional.</p>
+        <p>Buttons are nice and can provide a great user experience but you can't do anything really useful unless you have user input. User input allows users to log in, provide information, and interact with the system in a way that you just can't do with anything else. Thy way html does this is with the use of forms. Luckey, for us Bootsrap has a way to make forms look nice and professional.</p>
         <br>
         <p>Below is an example of a very standard login form.</p>
         <br>
@@ -113,8 +113,9 @@
         </pre>
     
         <h3>Inputs</h3>
-        <p>As you can see from above bootstrap provides several types of inputs we showed you a basic text field above using the form-control class. Following the theme of the rest of the tutorial, bootstrap provides more.</p>
+        <p>As you can see from above bootstrap provides several types of inputs we showed you a basic text field above using the form-control class. Following the theme of the rest of the tutorial, bootstrap provides more options.</p>
     
+        <br>
         <h4>Textareas</h4>
         <div class="form-group">
             <label for="comment">Bootstrap also provides text areas.</label>
@@ -131,7 +132,7 @@
     
         <br>
         <h3>Check Boxes</h3>
-        <p>In addition to text fields there are also two types of check boxes available for us to use. They are normal and inline check boxes.</p>
+        <p>In addition to text fields there are also two types of check boxes available for us to use. They are normal and inline check boxes. The main difference between the two is that normal text boxes align vertically and inline textboxes aline on the same line.</p>
     
         <br>
         <h4>Normal Checkboxes</h4>
@@ -163,13 +164,15 @@
         
         <br>
         <h4>Inline Checkboxes</h4>
-        <p>Inline check boxes look very similar to normal checkboxes but instead of apearing vertically they apear horizontally like:</p>
+        <p>Inline check boxes look very similar to normal checkboxes but instead of appearing vertically they appear horizontally like:</p>
         
         <label class="checkbox-inline"><input type="checkbox" value="">Pick me</label>
         <label class="checkbox-inline"><input type="checkbox" value="">No pick me</label>
         <label class="checkbox-inline"><input type="checkbox" value="">How about me</label>
     
-        <p>The code for this is very similar the the normal checkboxes but the label uses the checkbox-inline class instead of the checkbox class for div.</p>
+        <br>
+        <br>
+        <p>The code for this is very similar the normal checkboxes but the label uses the checkbox-inline class instead of the checkbox class for div.</p>
         <pre>
             <code>
 &ltlabel class="checkbox-inline"&gt&ltinput type="checkbox" value=""&gtPick me&lt/label&gt
@@ -209,7 +212,7 @@
             </code>
         </pre>
     
-        <p>Radio buttons, just like checkboxes, have a inline mode. To use them you do it a very similar way to the inline checkbox. </p>
+        <p>Radio buttons, just like checkboxes, have an inline mode. To use them you do it a very similar way to the inline checkbox. </p>
         <pre>
             <code>
 &ltlabel class="radio-inline"&gt&ltinput type="radio" name="optradio"&gtPick Me&lt/label&gt
@@ -225,10 +228,10 @@
         <label class="radio-inline"><input type="radio" name="optradio">How About Me</label>
     
         <h3>Bootstrap Select Lists</h3>
-        <p>Finally, the last form of input that we are going to talk about are bootstrap's select lists. Bootstrap provides two ways to show select lists. They can either be shown in a drop down or in a mulitiple select list.</p>
+        <p>Finally, the last form of input that we are going to talk about are bootstrap's select lists. Bootstrap provides two ways to show select lists. They can either be shown in a drop down or in a multiple select list.</p>
         <br>
         <h4>Drop Down</h4>
-        <p>The drop down is another funtimental element for gathering user input. It allows users to select an option from a list of choices. The bootstrap drop down looks like:</p>
+        <p>The drop down is another fundamental element for gathering user input. It allows users to select an option from a list of choices. The bootstrap drop down looks like:</p>
         <form role="form">
             <div class="form-group">
                 <label for="sel1">Drop Down Pick the One you Want:</label>
@@ -272,6 +275,7 @@
     
         <br>
     
+        <p>The code to implement this:</p>
         <pre>
             <code>
 &ltform role="form"&gt
@@ -279,13 +283,17 @@
         &ltlabel for="sel2">This is a multiple select list: You can hold shift to select more than one:&lt/label&gt
             &ltselect multiple class="form-control"&gt
                 &ltoption&gtSelect Me&lt/option&gt
-                &ltoption&gtHold Shift to Selct me Too&lt/option&gt
+                &ltoption&gtHold Shift to Select me Too&lt/option&gt
                 &ltoption&gtYou can select all of us if you want to&lt/option&gt
             &lt/select&gt
         &lt/div&gt
         &lt/form&gt
             </code>
         </pre>
+    
+    <h3>Next</h3>
+    <p>These are the main forms of input in bootstrap. As you can see there are many options and an almost infinite amount of ways to style everything. Bootstrap provides a great framework to integrate user interaction. Now that we have general bootstrap down we are going to talk about more advanced features in bootstrap. Click on advanced to learn more.
     </div>
+
 </body>
 </html>
