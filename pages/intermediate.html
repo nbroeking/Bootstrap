@@ -129,7 +129,163 @@
 &lt/div&gt        
         </code></pre>
     
+        <br>
+        <h3>Check Boxes</h3>
+        <p>In addition to text fields there are also two types of check boxes available for us to use. They are normal and inline check boxes.</p>
     
+        <br>
+        <h4>Normal Checkboxes</h4>
+        <pre>
+            <code>
+&ltdiv class="checkbox"&gt
+  &ltlabel&gt&ltinput type="checkbox" value=""&gtPick Me&lt/label&gt
+&lt/div&gt
+&ltdiv class="checkbox"&gt
+  &ltlabel&gt&ltinput type="checkbox" value=""&gtNo Pick Me&lt/label&gt
+&lt/div&gt
+&ltdiv class="checkbox disabled"&gt
+  &ltlabel&gt&ltinput type="checkbox" value="" disabled&gtHow About Me&lt/label&gt
+&lt/div&gt
+            </code>
+        </pre>
+
+        <br>
+        <p>This code produces text boxes that look like:</p>
+        <div class="checkbox">
+            <label><input type="checkbox" value="">Pick Me</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" value="">No Pick Me</label>
+        </div>
+        <div class="checkbox disabled">
+            <label><input type="checkbox" value="" disabled>How About Me</label>
+        </div>
+        
+        <br>
+        <h4>Inline Checkboxes</h4>
+        <p>Inline check boxes look very similar to normal checkboxes but instead of apearing vertically they apear horizontally like:</p>
+        
+        <label class="checkbox-inline"><input type="checkbox" value="">Pick me</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">No pick me</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">How about me</label>
+    
+        <p>The code for this is very similar the the normal checkboxes but the label uses the checkbox-inline class instead of the checkbox class for div.</p>
+        <pre>
+            <code>
+&ltlabel class="checkbox-inline"&gt&ltinput type="checkbox" value=""&gtPick me&lt/label&gt
+&ltlabel class="checkbox-inline"&gt&ltinput type="checkbox" value=""&gtNo Pick Me&lt/label&gt
+&ltlabel class="checkbox-inline"&gt&ltinput type="checkbox" value=""&gtHow About Me&lt/label&gt
+            </code>
+        </pre>
+    
+        <br>
+
+        <h3>Radio Buttons</h3>
+        <p>Another staple that every web framework has is radio buttons. Radio buttons allow you to select one option out of a list of several. Radio buttons in boot strap look like:</p>
+    
+        <div class="radio">
+            <label><input type="radio" name="optradio">Pick me</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="optradio">No Pick Me</label>
+        </div>
+        <div class="radio disabled">
+            <label><input type="radio" name="optradio" disabled>How About Me</label>
+        </div>
+    
+        <p>And of course this wouldn't be a tutorial without showing you the code.</p>
+    
+        <pre>
+            <code>
+&ltdiv class="radio"&gt
+    &ltlabel&gt&ltinput type="radio" name="optradio"&gtPick me&lt/label&gt
+&lt/div&gt
+&ltdiv class="radio"&gt
+    &ltlabel&gt&ltinput type="radio" name="optradio"&gtNo Pick Me&lt/label&gt
+&lt/div&gt
+&ltdiv class="radio disabled"&gt
+    &ltlabel&gt&ltinput type="radio" name="optradio" disabled&gtHow About Me&lt/label&gt
+&lt/div&gt
+            </code>
+        </pre>
+    
+        <p>Radio buttons, just like checkboxes, have a inline mode. To use them you do it a very similar way to the inline checkbox. </p>
+        <pre>
+            <code>
+&ltlabel class="radio-inline"&gt&ltinput type="radio" name="optradio"&gtPick Me&lt/label&gt
+&ltlabel class="radio-inline"&gt&ltinput type="radio" name="optradio"&gtNo Pick Me&lt/label&gt
+&ltlabel class="radio-inline"&gt&ltinput type="radio" name="optradio"&gtHow About Me&lt/label&gt
+            </code>
+        </pre>
+    
+        <p>These look like:</p>
+        <br>
+        <label class="radio-inline"><input type="radio" name="optradio">Pick Me</label>
+        <label class="radio-inline"><input type="radio" name="optradio">No Pick Me</label>
+        <label class="radio-inline"><input type="radio" name="optradio">How About Me</label>
+    
+        <h3>Bootstrap Select Lists</h3>
+        <p>Finally, the last form of input that we are going to talk about are bootstrap's select lists. Bootstrap provides two ways to show select lists. They can either be shown in a drop down or in a mulitiple select list.</p>
+        <br>
+        <h4>Drop Down</h4>
+        <p>The drop down is another funtimental element for gathering user input. It allows users to select an option from a list of choices. The bootstrap drop down looks like:</p>
+        <form role="form">
+            <div class="form-group">
+                <label for="sel1">Drop Down Pick the One you Want:</label>
+                <select class="form-control">
+                <option>You can select me</option>
+                <option>You can select me too</option>
+                <option>I am the best</option>
+                </select>
+            </div>
+        </form>
+    
+        <p>In order to create a drop down you need to create a form that has a select tag that uses the class .form-control. This looks like:</p>
+    
+        <pre>
+            <code>
+&ltform role="form"&gt
+    &ltdiv class="form-group"&gt
+        &ltlabel for="sel1"&gtDrop Down Pick the One you Want:&lt/label&gt
+        &ltselect class="form-control"&gt
+            &ltoption&gtYou can select me&lt/option&gt
+            &ltoption&gtYou can select me too&lt/option&gt
+            &ltoption&gtI am the best&lt/option&gt
+        &lt/select&gt
+    &lt/div&gt
+&lt/form&gt
+            </code>
+        </pre>
+    
+        <br>
+        <p>The other kind of Select List is the multiple select list.</p>
+        <form role="form">
+        <div class="form-group">  
+            <label for="sel2">This is a multiple select list: You can hold shift to select more than one:</label>
+            <select multiple class="form-control">
+                <option>Select Me</option>
+                <option>Hold Shift to Selct me Too</option>
+                <option>You can select all of us if you want to</option>
+            </select>
+        </div>
+        </form>
+    
+        <br>
+    
+        <pre>
+            <code>
+&ltform role="form"&gt
+    &ltdiv class="form-group"&gt
+        &ltlabel for="sel2">This is a multiple select list: You can hold shift to select more than one:&lt/label&gt
+            &ltselect multiple class="form-control"&gt
+                &ltoption&gtSelect Me&lt/option&gt
+                &ltoption&gtHold Shift to Selct me Too&lt/option&gt
+                &ltoption&gtYou can select all of us if you want to&lt/option&gt
+            &lt/select&gt
+        &lt/div&gt
+        &lt/form&gt
+            </code>
+        </pre>
     </div>
 </body>
 </html>
