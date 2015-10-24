@@ -22,11 +22,13 @@
 <body>
     <div class="container">
         <h1>Advanced</h1>
+        <p>For the final part of our tutorial, we will transition to some even more advanced features of bootstrap. We will cover a variety of different components, many of which require JavaScript. Therefore, for some of them to work, you will have to be updating not only html content, but also accompanying JavaScript code. </p>
+
         <!-- Modals -->
         <h3 class="page-section">Modal</h3>
             <div class="line-separator"></div>
             <h4 class ="page-section-sub">Description</h4>
-                <p>Modals are used for small diaog prompts that display in a layer above the rest of the page. They can be a great asset for pop-up content such as descriptions, tooltips, or other content that doesn't quite fit on the page itself. 
+                <p>Modals are used for small dialog prompts that display in a layer above the rest of the page. They can be a great asset for pop-up content such as descriptions, tooltips, or other content that doesn't quite fit on the page itself.</p>
             <h4 class ="page-section-sub">Example</h4>
                 <!-- Button trigger modal -->
                 <div class ="span6" style="text-align:center">
@@ -97,6 +99,75 @@
                     &lt/div&gt
                   &lt/div&gt
                 </pre></code>
+        <!-- Collapse -->
+        <h3 class = "page-section">Collapse</h3>
+        <div class="line-separator"></div>
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Description
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                  Collapse allows us to easily toggle segments of content. An example of a bootstrap supported collapse implementation is the accordion. The content you are currently viewing is being displayed within an accordion. 
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Example
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                  This structure is the example!
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Code
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                  <p> To create an accordian, initialize a new panel-group. Within this group, you will simply create various panels.</p>
+                  <pre><code>
+&ltdiv class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"&gt
+                  </pre></code>
+                  <p> Below is an example of a panel. It will have a title and body. You can paste this panel code as many times as needed to create the body of your accordion. 
+                  <pre><code>
+    &ltdiv class="panel panel-default"&gt
+      &ltdiv class="panel-heading" role="tab" id="headingOne"&gt
+        &lth4 class="panel-title"&gt
+          &lta role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"&gt
+            Description
+          &lt/a&gt
+        &lt/h4&gt
+      &lt/div&gt
+      &ltdiv id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne"&gt
+        &ltdiv class="panel-body"&gt
+           Collapse allows us to easily toggle segments of content. An example of a bootstrap supported collapse implementation is the accordion. The content you are currently viewing is being displayed within an accordion. 
+        &lt/div&gt
+      &lt/div&gt
+    &lt/div&gt
+                  </pre></code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
 
         <!-- Carousel -->
         <h3 class ="page-section">Carousel</h3>
@@ -158,7 +229,7 @@
                     &ltli data-target="#carousel-example-generic" data-slide-to="2"&gt&lt/li&gt
                   &lt/ol&gt
                   </pre></code>
-                  <p> You will also need a wrapper for every slide in the carousel. This is where we will specficy all ofthe content for each slide. This includes an image and a caption.</p>
+                  <p> You will also need a wrapper for every slide in the carousel. This is where we will specify all of the content for each slide. This includes an image and a caption.</</p>
                   <pre><code>
                   &lt!-- Wrapper for slides --&gt
                   &ltdiv class="carousel-inner" role="listbox"&gt
@@ -182,7 +253,7 @@
                     &lt/div&gt
                   &lt/div&gt
                   </pre></code>
-                    <p> Finally there is the controls section. This can be left alone for generic carousels, and simply specifys what the associated buttons will look like for previous/next.</p>
+                    <p> Finally there is the controls section. This can be left alone for generic carousels, and simply specifies what the associated buttons will look like for previous/next.</p>
                   <pre><code>
                   &lt!-- Controls --&gt
                   &lta class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"&gt
@@ -237,7 +308,7 @@
                   &ltbutton type="button" class="btn btn-danger"  id="failureButton" onclick="showError();"&gtClick for Failure&lt/button&gt
               &lt/div&gt
           </pre></code>
-          <p> Within main.js, we defined some javascript events that these buttos are associatd with. Below is the example event for the success alert. It simply shows the associated alert, and hides the other. </p>
+          <p> Within main.js, we defined some JavaScript events that these buttons are associated with. Below is the example event for the success alert. It simply shows the associated alert, and hides the other.  </p>
           <pre></code>
             function showSuccess() {
                $('#successAlert').show();
@@ -245,7 +316,7 @@
                $('#failureAlert').hide();
             }
           </pre></code>
-          <p>Below are our alerts. Within the class specifier, we specify what type of alert it is(I.E. alert-success, alert-warning, alert-danger, etc). We initalize them to be hidden. In order to have the user to be able to close, we add the button, and use the "data-dismiss" attribute to allow for the alert to be closed</p>
+          <p>Below are our alerts. Within the class specifier, we specify what type of alert it is(I.E. alert-success, alert-warning, alert-danger, etc). We initialize them to be hidden. In order to have the user to be able to close, we add the button, and use the "data-dismiss" attribute to allow for the alert to be closed</p>
           <pre><code>
               &ltdiv class="alert alert-success" role="alert" id="successAlert" style="display:none;"&gtSuccess! You clicked the success button.
                 &ltbutton type="button" class="close" data-dismiss="alert"&gt
@@ -276,83 +347,58 @@
             <a tabindex="0" class="btn btn-lg btn-primary" role="button" data-toggle="popover" data-trigger="hover" title="Click for a tooltip." data-content="This is a small message associated with the button." >Hover for a popover msg.</a>
           </div>
           <h4 class ="page-section-sub">Code</h4>
-           <p> Popovers are fairly simple to create. In this case, we simply create a button, and make it toggle-able by addig the "data-toggle" attribute. In order to specifcy how the toggle is prompted, the "data-trigger" field is modified(Click,Hover,Focus,Manual) are the possible settigs. We used tobth Focus and Hover for our two examples. 
+           <p> Popovers are fairly simple to create. In this case, we simply create a button, and make it toggle-able by adding the "data-toggle" attribute. In order to specify how the toggle is prompted, the "data-trigger" field is modified(Click,Hover,Focus,Manual) are the possible settings. We used both Focus and Hover for our two examples. 
            <pre><code>
             &lta tabindex="0" class="btn btn-lg btn-primary" role="button" data-toggle="popover" data-trigger="focus" title="Click for a tooltip." data-content="This is a small message associated with the button." &gtClick for a popover msg.&lt/a&gt
            </pre></code>
-           <p> This code is not quite enough for the popovers to work though. You need to initialize them through javascript. This can be done by simply calling the "popover()" method on a given popover. Below is an example of initilaizing all popover components by specifying anything with a popover data-toggle.</p>
+           <p> This code is not quite enough for the popovers to work though. You need to initialize them through JavaScript. This can be done by simply calling the "popover()" method on a given popover. Below is an example of initializing all popover components by specifying anything with a popover data-toggle.</p>
 
            <pre><code>
               $('[data-toggle="popover"]').popover();
            </pre></code>
+      
+        <!-- Tabs -->
+        <h3 class = "page-section">Tabs</h3>
         <div class="line-separator"></div>
+          <div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#description" aria-controls="home" role="tab" data-toggle="tab">Description</a></li>
+              <li role="presentation"><a href="#example" aria-controls="profile" role="tab" data-toggle="tab">Example</a></li>
+              <li role="presentation"><a href="#code" aria-controls="messages" role="tab" data-toggle="tab">Code</a></li>
+            </ul>
 
-        <!-- Tooltip -->
-        <h3 class = "page-section">Collapse</h3>
-        <div class="line-separator"></div>
-          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Description
-                  </a>
-                </h4>
+            <!-- Tab panes -->
+            <div class="tab-content" style="min-height:400px;">
+              <div role="tabpanel" class="tab-pane active" id="description">
+                <br>
+                Tabs are an extremely convenient way to maximize the content on your page, without adding noticeable clutter. They can be implemented completely through html markup, but it's also possible to use JavaScript. 
               </div>
-              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                  Collapse allows us to easily toggle segments of content. An example of a bootstrap supported collapse implementation is the accordian. The content you are currently viewing is being displayed within an accordian. 
-                </div>
+              <div role="tabpanel" class="tab-pane" id="example">
+                <br>
+                The structure of this section is the example. We have implemented tabs completely using html markup. Check out the code tab to see how!
               </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingTwo">
-                <h4 class="panel-title">
-                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Example
-                  </a>
-                </h4>
-              </div>
-              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <div class="panel-body">
-                  This structure is the example!
-                </div>
+              <div role="tabpanel" class="tab-pane" id="code">
+                <br>
+                <p> In order to use tabs, we just had to define a "nav-tabs" class and a "tab-content" div section. You must ensure that for every tab you define, there is a corresponding tabpanel with an id that matches the href of the tab. Within the "tab-content" section, the "..." would be replaced with all the content for the body of that tab.</p>
+                <pre><code>
+                  &lt!-- Nav tabs --&gt
+                     &ltul class="nav nav-tabs" role="tablist"&gt
+                       &ltli role="presentation" class="active"&gt&lta href="#description" aria-controls="home" role="tab" data-toggle="tab"&gtDescription&lt/a&gt&lt/li&gt
+                       &ltli role="presentation">&lta href="#example" aria-controls="profile" role="tab" data-toggle="tab"&gtExample&lt/a&gt&lt/li&gt
+                       &ltli role="presentation">&lta href="#code" aria-controls="messages" role="tab" data-toggle="tab"&gtCode&lt/a&gt&lt/li&gt
+                     &lt/ul&gt
+
+                    &lt!-- Tab panes --&gt
+                     &ltdiv class="tab-content"&gt
+                       &ltdiv role="tabpanel" class="tab-pane active" id="description"&gt...&lt/div&gt
+                       &ltdiv role="tabpanel" class="tab-pane" id="example"&gt...&lt/div&gt
+                       &ltdiv role="tabpanel" class="tab-pane" id="code"&gt...&lt/div&gt
+                     &lt/div>
+                </pre></code>
               </div>
             </div>
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingThree">
-                <h4 class="panel-title">
-                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Code
-                  </a>
-                </h4>
-              </div>
-              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                <div class="panel-body">
-                  <p> To create an accordian, initialize a new panel-group. Within this group, you will simply create various panels.</p>
-                  <pre><code>
-&ltdiv class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"&gt
-                  </pre></code>
-                  <p> Below is an example of a panel. It will have a title and body. You can paste this panel code as many times as needed to create the body of your accordian. 
-                  <pre><code>
-    &ltdiv class="panel panel-default"&gt
-      &ltdiv class="panel-heading" role="tab" id="headingOne"&gt
-        &lth4 class="panel-title"&gt
-          &lta role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"&gt
-            Description
-          &lt/a&gt
-        &lt/h4&gt
-      &lt/div&gt
-      &ltdiv id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne"&gt
-        &ltdiv class="panel-body"&gt
-          Collapse allows us to easily toggle segments of content. An example of a bootstrap supported collapse implementation is the accordian. The content you are currently viewing is being displayed within an accordian. 
-        &lt/div&gt
-      &lt/div&gt
-    &lt/div&gt
-                  </pre></code>
-                </div>
-              </div>
-            </div>
+
           </div>
 
 
