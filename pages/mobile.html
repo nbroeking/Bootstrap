@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+		<title>Bootstrap Tutorial</title>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></link>
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"></link>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+
+<body> <div class="container">
+
+        <h1>Scaffolding</h1>
+
+        From the very beginning, Bootstrap was designed to work with
+        mobile well with mobile devices as well as desktop devices.
+        To accomplish this, Bootstrap rolled out its own kind of
+        layout system it calls <i>Scaffolding</i>. This allows the
+        developer to layout widgets in the terms of an implicit
+        grid bootstap has that by default has 12 columns.
+
+        So if I want to make a <span class="verb">&lt;div&gt;</span> that fills up the
+        entire container, its as simple as saying
+        <span class="verb">
+            &lt;div class="col-md-12"&gt;
+        </span>
+
+        <div class="container inner-example">
+        <div class="row">
+            <div class="col-md-12 example">12</div>
+
+            <div class="col-md-6 example">6</div>
+            <div class="col-md-6 example">6</div>
+
+            <div class="col-md-3 example">3</div>
+            <div class="col-md-3 example">3</div>
+
+            <div class="col-md-4 example">4</div>
+            <div class="col-md-2 example">2</div>
+
+            <div class="col-md-1 example">1</div>
+            <div class="col-md-2 example">2</div>
+            <div class="col-md-3 example">3</div>
+
+            <div class="col-md-2 example">2</div>
+            <div class="col-md-2 example">2</div>
+            <div class="col-md-1 example">1</div>
+            <div class="col-md-1 example">1</div>
+        </div>
+        </div>
+
+        The code for this is pretty straight-forward, all we have
+        is:
+
+        <pre>
+            &lt;div class="row"&gt;
+                &lt;div class="col-md-12 example"&gt;12&lt;/div&gt;
+                &lt;div class="col-md-6 example"&gt;6&lt;/div&gt;
+                &lt;div class="col-md-6 example"&gt;6&lt;/div&gt;
+                &lt;div class="col-md-3 example"&gt;3&lt;/div&gt;
+                &lt;div class="col-md-3 example"&gt;3&lt;/div&gt;
+                &lt;div class="col-md-6 example"&gt;6&lt;/div&gt;
+                &lt;div class="col-md-1 example"&gt;1&lt;/div&gt;
+                &lt;div class="col-md-2 example"&gt;2&lt;/div&gt;
+                &lt;div class="col-md-3 example"&gt;3&lt;/div&gt;
+                &lt;div class="col-md-6 example"&gt;6&lt;/div&gt;
+            &lt;/div&gt;
+        </pre>
+
+
+        This scaffolding is extremely useful when designing web applications for
+        several reasons. First, these elements are responsive. That means that they
+        will automatically shuffle to ensure that the elements will fit on the screen
+        that they are trying to fit on.
+
+
+        You'll notice that if you zoom in on your browser or look on a mobile device,
+        this scaffolding will turn into a stack of scaffolds. This is something
+        that Bootstrap does automatically to better fit the content on a smaller
+        device.
+
+
+
+
+    </div>
+
+</body>
+
+</html>
