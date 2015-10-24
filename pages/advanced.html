@@ -55,6 +55,49 @@
                 </div>
             <h4 class ="page-section-sub">Code</h4>
 
+                </p>The below code actually creates the trigger for the modal. In our case, this is a button. We bind it to the actual modal object that it is associated with using: data-target.</p>
+                <pre><code>
+                  <!-- Button trigger modal -->
+                  &ltdiv class ="span6" style="text-align:center"&gt
+                  &ltbutton type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" 
+                    style="margin-left:auto; margin-right:auto; text-align:center"&gt
+                    View the modal!
+                  &lt/button&gt
+                  &lt/div&gt
+                </pre></code>
+                <p>Here we have the actual creation of the modal view. </p>
+                <pre><code>
+                  <!-- Modal -->
+                  &ltdiv class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"&gt
+                    &ltdiv class="modal-dialog" role="document"&gt
+                      &ltdiv class="modal-content"&gt
+                        </pre></code>
+                          <p>The modal content is split into 3 parts, a header, body, and footer. Below is the header section, which creates our title. The data-dismiss field adds the ability to close the modal with the 'x' on the top right corner.</p>
+                        <pre><code>
+                        &ltdiv class="modal-header"&gt
+                          &ltbutton type="button" class="close" data-dismiss="modal" aria-label="Close"&gt&ltspan aria-hidden="true"
+                          &gt&times;&lt/span>&lt/button&gt
+                          &lth4 class="modal-title" id="myModalLabel">Super Cool Modal&lt/h4&gt
+                        &lt/div&gt
+                         </pre></code>
+                          <p>The body contains the majority of the content for the modal. </p>
+                        <pre><code>
+                        &ltdiv class="modal-body"&gt
+                          You may want some extra content associated with some object, that would clutter the rest of the page too much. 
+                          A modal is the perfect place!
+                        &lt/div&gt
+                         </pre></code>
+                           <p>The footer can be used for simply adding controls for the modal. In our case, we have included a close and "save" button.</p>
+                         <pre><code>
+                        &ltdiv class="modal-footer"&gt
+                          &ltbutton type="button" class="btn btn-default" data-dismiss="modal"&gtClose&lt/button&gt
+                          &ltbutton type="button" class="btn btn-primary"&gtSave changes&lt/button&gt
+                        &lt/div&gt
+                      &lt/div&gt
+                    &lt/div&gt
+                  &lt/div&gt
+                </pre></code>
+
         <!-- Carousel -->
         <h3 class ="page-section">Carousel</h3>
             <div class="line-separator"></div>
@@ -102,6 +145,56 @@
                   </a>
                 </div>
             <h4 class ="page-section-sub">Code</h4>
+            <p> To create a carousel we need to specify the overarching class, and give some basic styling info.</p>
+            <pre><code>
+              &ltdiv id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width:50%; margin-left:auto;margin-right:auto"&gt
+            </pre></code>
+                  <p> The first part of a carousel is the indicators. Here is where you can specify the number of slides, and which is the default active slide.</p>
+                  <pre><code>
+                  &lt!-- Indicators --&gt
+                  &ltol class="carousel-indicators"&gt
+                    &ltli data-target="#carousel-example-generic" data-slide-to="0" class="active"&gt&lt/li&gt
+                    &ltli data-target="#carousel-example-generic" data-slide-to="1"&gt&lt/li&gt
+                    &ltli data-target="#carousel-example-generic" data-slide-to="2"&gt&lt/li&gt
+                  &lt/ol&gt
+                  </pre></code>
+                  <p> You will also need a wrapper for every slide in the carousel. This is where we will specficy all ofthe content for each slide. This includes an image and a caption.</p>
+                  <pre><code>
+                  &lt!-- Wrapper for slides --&gt
+                  &ltdiv class="carousel-inner" role="listbox"&gt
+                    &ltdiv class="item active"&gt
+                      &ltimg src="img/img1.jpg" alt="..." style="width:100%" &gt
+                      &ltdiv class="carousel-caption"&gt
+                        This is a picture of roses!
+                      &lt/div&gt
+                    &lt/div&gt
+                    &ltdiv class="item"&gt
+                      &ltimg src="img/img2.jpg" alt="..." style="width:100%"  &gt
+                      &ltdiv class="carousel-caption"&gt
+                        This is a picture of a landscape!
+                      &lt/div&gt
+                    &lt/div&gt
+                    &ltdiv class="item"&gt
+                      &ltimg src="img/img3.jpg" alt="..." style="width:100%" &gt
+                      &ltdiv class="carousel-caption"&gt
+                        This is a picture of the beach!
+                      &lt/div&gt
+                    &lt/div&gt
+                  &lt/div&gt
+                  </pre></code>
+                    <p> Finally there is the controls section. This can be left alone for generic carousels, and simply specifys what the associated buttons will look like for previous/next.</p>
+                  <pre><code>
+                  &lt!-- Controls --&gt
+                  &lta class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"&gt
+                    &ltspan class="glyphicon glyphicon-chevron-left" aria-hidden="true"&gt&lt/span&gt
+                    &ltspan class="sr-only"&gtPrevious&lt/span&gt
+                  &lt/a&gt
+                  &lta class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"&gt
+                    &ltspan class="glyphicon glyphicon-chevron-right" aria-hidden="true"&gt&lt/span&gt
+                    &ltspan class="sr-only"&gtNext&lt/span&gt
+                  &lt/a&gt
+                &lt/div&gt
+            </pre></code>
 
         <!-- Alerts -->
         <h3 class ="page-section">Alerts</h3>
@@ -135,6 +228,34 @@
           </div>
 
           <h4 class ="page-section-sub">Code</h4>
+          <p>In order to demonstrate alerts we create a few buttons that will be associated with them. Below are 3 buttons, each of them has an "onClick" event that will trigger an alert."</p>
+          <pre><code>
+            &ltdiv class ="span6" style="text-align:center"&gt
+              &ltdiv class="btn-group" role="group" aria-label="..."&gt
+                  &ltbutton type="button" class="btn btn-primary" id="successButton" onclick="showSuccess();"&gtClick for Success&lt/button&gt
+                  &ltbutton type="button" class="btn btn-warning" id="warningButton" onclick="showWarning();"&gtClick for Warning&lt/button&gt
+                  &ltbutton type="button" class="btn btn-danger"  id="failureButton" onclick="showError();"&gtClick for Failure&lt/button&gt
+              &lt/div&gt
+          </pre></code>
+          <p>Below are our alerts. Within the class specifier, we specify what type of alert it is(I.E. alert-success, alert-warning, alert-danger, etc). We initalize them to be hidden. In order to have the user to be able to close, we add the button, and use the "data-dismiss" attribute to allow for the alert to be closed</p>
+          <pre><code>
+              &ltdiv class="alert alert-success" role="alert" id="successAlert" style="display:none;"&gtSuccess! You clicked the success button.
+                &ltbutton type="button" class="close" data-dismiss="alert"&gt
+                  X
+                &lt/button&gt
+              &lt/div&gt
+              &ltdiv class="alert alert-warning" role="alert" id="warningAlert" style="display:none;"&gtWarning... not a good button to press.
+                &ltbutton type="button" class="close" data-dismiss="alert"&gt
+                  X
+                &lt/button&gt
+              &lt/div&gt
+              &ltdiv class="alert alert-danger" role="alert" id="failureAlert" style="display:none;"&gt
+                Failure! Why did you click this??
+                &ltbutton type="button" class="close" data-dismiss="alert"&gt
+                  X
+                &lt/button&gt
+              &lt/div&gt
+          </pre></code>
 
         <!-- Popover -->
         <h3 class = "page-section">Popover</h3>
@@ -191,12 +312,55 @@
               </div>
               <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                 <div class="panel-body">
-                  Code Code Code 
-                  Code Code Code 
-                  Code Code Code 
-                  Code Code Code 
-                  Code Code Code 
-                  Code Code Code 
+                  <pre><code>
+                  &lth3 class = "page-section"&gtCollapse&lt/h3&gt
+                    &ltdiv class="line-separator"&gt&lt/div&gt
+                      &ltdiv class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"&gt
+                        &ltdiv class="panel panel-default"&gt
+                          &ltdiv class="panel-heading" role="tab" id="headingOne"&gt
+                            &lth4 class="panel-title"&gt
+                              &lta role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"&gt
+                                Description
+                              &lt/a&gt
+                            &lt/h4&gt
+                          &lt/div&gt
+                          &ltdiv id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne"&gt
+                            &ltdiv class="panel-body"&gt
+                              Collapse allows us to easily toggle segments of content. An example of a bootstrap supported collapse implementation is the accordian. The content you are currently viewing is being displayed within an accordian. 
+                            &lt/div&gt
+                          &lt/div&gt
+                        &lt/div&gt
+                        &ltdiv class="panel panel-default"&gt
+                          &ltdiv class="panel-heading" role="tab" id="headingTwo"&gt
+                            &lth4 class="panel-title"&gt
+                              &lta class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"&gt
+                                Example
+                              &lt/a&gt
+                            &lt/h4&gt
+                          &lt/div&gt
+                          &ltdiv id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo"&gt
+                            &ltdiv class="panel-body"&gt
+                              This structure is the example!
+                            &lt/div&gt
+                          &lt/div&gt
+                        &lt/div&gt
+                        &ltdiv class="panel panel-default"&gt
+                          &ltdiv class="panel-heading" role="tab" id="headingThree"&gt
+                            &lth4 class="panel-title"&gt
+                              &lta class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"&gt
+                                Code
+                              &lt/a&gt
+                            &lt/h4&gt
+                          &lt/div&gt
+                          &ltdiv id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree"&gt
+                            &ltdiv class="panel-body"&gt
+                              &ltpre&gt&ltcode&gt
+                              &lt/pre&gt&lt/code&gt
+                            &lt/div&gt
+                          &lt/div&gt
+                        &lt/div&gt
+                      &lt/div&gt
+                  </pre></code>
                 </div>
               </div>
             </div>
