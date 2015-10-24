@@ -28,7 +28,7 @@
         <h3 class="page-section">Modal</h3>
             <div class="line-separator"></div>
             <h4 class ="page-section-sub">Description</h4>
-                <p>Modals are used for small dialog prompts that display in a layer above the rest of the page. They can be a great asset for pop-up content such as descriptions, tooltips, or other content that doesn't quite fit on the page itself.</p>
+                <p>Modals are used for small dialog prompts that display in a layer above the rest of the page. They can be a great asset for pop-up content such as descriptions, sub-menus, content zoom-ins, etc.</p>
             <h4 class ="page-section-sub">Example</h4>
                 <!-- Button trigger modal -->
                 <div class ="span6" style="text-align:center">
@@ -173,7 +173,7 @@
         <h3 class ="page-section">Carousel</h3>
             <div class="line-separator"></div>
             <h4 class ="page-section-sub">Description</h4>
-            <p>Carousels are an easy way to display image content in a fancy way. They display a series of images, which slide in and out. Images can be accompanied by a text overlay.
+            <p>Carousels are an easy way to display image content in a slide-show manor. Images can be accompanied by a text overlay.
             <h4 class ="page-section-sub">Example</h4>
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width:50%; margin-left:auto;margin-right:auto">
                   <!-- Indicators -->
@@ -272,7 +272,7 @@
         <div class="line-separator"></div>
 
           <h4 class ="page-section-sub">Description</h4>
-            <p>Alerts are very handy for making websites interactive for the user. They can be used to indicate the status of various components of the website, and most commonly, be used in conjunction with forms. Below we have a series of buttons that spawn different alerts.
+            <p>Alerts are a useful way to provide feedback associated with the action of the user. They can be used to indicate the status of various components of the website, and most commonly, be used in conjunction with forms. Below we have a series of buttons that spawn different alerts.
           <h4 class ="page-section-sub">Example</h4>
             <div class ="span6" style="text-align:center">
               <div class="btn-group" role="group" aria-label="...">
@@ -316,7 +316,7 @@
                $('#failureAlert').hide();
             }
           </pre></code>
-          <p>Below are our alerts. Within the class specifier, we specify what type of alert it is(I.E. alert-success, alert-warning, alert-danger, etc). We initialize them to be hidden. In order to have the user to be able to close, we add the button, and use the "data-dismiss" attribute to allow for the alert to be closed</p>
+          <p>Below are our alerts. Within the class specifier, we specify what type of alert it is(I.E. alert-success, alert-warning, alert-danger, etc). We initialize them to be hidden. In order to have the user to be able to close them, we add the button, and use the "data-dismiss" attribute to tell bootstrap the button should close the alert.</p>
           <pre><code>
               &ltdiv class="alert alert-success" role="alert" id="successAlert" style="display:none;"&gtSuccess! You clicked the success button.
                 &ltbutton type="button" class="close" data-dismiss="alert"&gt
@@ -340,14 +340,14 @@
         <h3 class = "page-section">Popover</h3>
         <div class="line-separator"></div>
           <h4 class ="page-section-sub">Description</h4>
-            </p>Popovers are an easy way to quickly display small bits of text, but in a much more light-weight manner than with modals. They can have various triggers(hover,click,etc), and are useful for simple tooltips. 
+            </p>Popovers are an easy way to quickly display small bits of content, but in a more light-weight manner than with modals. They can have various triggers(hover,click,etc), and can even include images within their content. They are implemented via tooltips, but have slightly more functionality, by allowing for both a title and content section. 
           <h4 class ="page-section-sub">Example</h4>
           <div class ="span6" style="text-align:center">
-            <a tabindex="0" class="btn btn-lg btn-primary" role="button" data-toggle="popover" data-trigger="focus" title="Click for a tooltip." data-content="This is a small message associated with the button." >Click for a popover msg.</a>
-            <a tabindex="0" class="btn btn-lg btn-primary" role="button" data-toggle="popover" data-trigger="hover" title="Click for a tooltip." data-content="This is a small message associated with the button." >Hover for a popover msg.</a>
+            <a tabindex="0" class="btn btn-lg btn-primary" role="button" data-toggle="popover" data-trigger="focus" title="A popover you need to click." data-content="This is a small message associated with the button." >Click for a popover msg.</a>
+            <a tabindex="0" class="btn btn-lg btn-primary" role="button" data-toggle="popover" data-trigger="hover" title="A popover that shows up via hover" data-content="This is a small message associated with the button." >Hover for a popover msg.</a>
           </div>
           <h4 class ="page-section-sub">Code</h4>
-           <p> Popovers are fairly simple to create. In this case, we simply create a button, and make it toggle-able by adding the "data-toggle" attribute. In order to specify how the toggle is prompted, the "data-trigger" field is modified(Click,Hover,Focus,Manual) are the possible settings. We used both Focus and Hover for our two examples. 
+           <p> Popovers are fairly simple to create. In this case, we simply create a button, and make it toggle-able by adding the "data-toggle" attribute. In order to specify how the toggle is prompted, the "data-trigger" field is modified(Click,Hover,Focus,Manual) are the possible settings. We used both Focus and Hover for our two examples.
            <pre><code>
             &lta tabindex="0" class="btn btn-lg btn-primary" role="button" data-toggle="popover" data-trigger="focus" title="Click for a tooltip." data-content="This is a small message associated with the button." &gtClick for a popover msg.&lt/a&gt
            </pre></code>
@@ -357,6 +357,27 @@
               $('[data-toggle="popover"]').popover();
            </pre></code>
       
+
+        <!-- Tooltip -->
+              <h3 class = "page-section">Tooltip</h3>
+              <div class="line-separator"></div>
+                <h4 class ="page-section-sub">Description</h4>
+                  </p>Tooltips are even more lightweight than the popover. Unlike popovers, they are not split into title and content sections. Use these for very simple, text-only, tooltips.
+                <h4 class ="page-section-sub">Example</h4>
+                  <div class ="span6" style="text-align:center">
+                  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Hover for a tooltip">Some extra info!</button>
+                  </div>
+                <h4 class ="page-section-sub">Code</h4>
+                  <p>We can modify the placement of our tooltip by switching the "data-placement" attribute. Tooltips support left,top,bottom,right. They are by default just triggered by hover, but you can modify this by adding the "data-trigger" field. The title field is where you specify the content that will appear within the tooltip. 
+                  <pre><code>
+                    &ltbutton type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Some extra info!"&gtHover for a tooltip&lt/button&gt
+                  </pre></code>
+                  <p> Just like popovers, javascript is required to activate a tooltip. 
+                  <pre><code>
+                    $('[data-toggle="tooltip"]').tooltip();
+                  </pre></code>
+
+
         <!-- Tabs -->
         <h3 class = "page-section">Tabs</h3>
         <div class="line-separator"></div>
@@ -376,7 +397,7 @@
               </div>
               <div role="tabpanel" class="tab-pane" id="example">
                 <br>
-                The structure of this section is the example. We have implemented tabs completely using html markup. Check out the code tab to see how!
+                The structure of this section is the example. In fact, bootstrap does not support nesting of tabs, so we could not have another tab section here. We have implemented our tabs completely using html markup. Check out the code tab to see how! 
               </div>
               <div role="tabpanel" class="tab-pane" id="code">
                 <br>
@@ -400,6 +421,7 @@
             </div>
 
           </div>
+       
 
 
 </body>

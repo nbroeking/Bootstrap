@@ -10,6 +10,7 @@ function showPage(file) {
                 $('#warningAlert').hide();
                 $('#failureAlert').hide();
                 $('[data-toggle="popover"]').popover();
+                $('[data-toggle="tooltip"]').tooltip();
             }
         
         }
@@ -41,4 +42,12 @@ function showError() {
    $('#failureAlert').show();
    $('#successAlert').hide();
    $('#warningAlert').hide();
+}
+
+if ( ($(window).height() + 100) < $(document).height() ) {
+    alert("lol");
+    $('#top-link-block').removeClass('hidden').affix({
+        // how far to scroll down before link "slides" into view
+        offset: {top:100}
+    });
 }
